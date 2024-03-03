@@ -6,7 +6,7 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import { dbConnection } from './mongo.js';
 import userRoutes from '../src/user/user.routes.js';
-//import authRoutes from '../src/auth/auth.routes.js';
+import authRoutes from '../src/auth/auth.routes.js';
 
 
 class Server {
@@ -14,11 +14,11 @@ class Server {
         this.app = express();
         this.port = process.env.PORT;
         this.usuarioPath = '/api/users';
-        
+        this.authPath = '/api/auth';
 
-        this.middlewares();  // Configura los middleware de la aplicación
-        this.conectarDB();  // Establece la conexión a la base de datos
-        this.routes();  // Configura las rutas de la aplicación
+        this.middlewares();  
+        this.conectarDB();  
+        this.routes();  
     }
 
     async conectarDB() {
@@ -35,7 +35,7 @@ class Server {
 
     routes() {
         this.app.use(this.usuarioPath, userRoutes);
-        
+        this.app.use(this.authPath, authRoutes);
     }
 
     listen() {

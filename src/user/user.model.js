@@ -15,11 +15,7 @@ const UserSchema = mongoose.Schema({
     type: String,
     required: [true, "La contraseña es obligatoria"],
   },
-  role: {
-    type: String,
-    required: true,
-    enum: ["ADMIN_ROLE", "USER_ROLE"],
-  },
+  
   estado: {
     type: Boolean,
     default: true,

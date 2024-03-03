@@ -20,8 +20,8 @@ export const getUsers = async (req = request, res = response) => {
 }
 
 export const createUser = async (req, res) => {
-    const { nombre, correo, password, role, phone } = req.body;
-    const user = new User({ nombre, correo, password, role, phone });
+    const { nombre, correo, password } = req.body;
+    const user = new User({ nombre, correo, password  });
 
 
     const salt = bcryptjs.genSaltSync();
@@ -45,12 +45,9 @@ export const getUserById = async (req, res) => {
 
 export const updateUser = async (req, res = response) => {
     const { id } = req.params;
-    const { _id, password, google, correo, ...rest } = req.body;
+    const { _id, ...rest } = req.body;
 
-    if (password) {
-        const salt = bcryptjs.genSaltSync(); 
-        rest.password = bcryptjs.hashSync(password, salt);
-    }
+   
 
     await User.findByIdAndUpdate(id, rest);
 

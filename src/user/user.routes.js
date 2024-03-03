@@ -5,7 +5,6 @@ import {
   createUser,
   getUserById,
   updateUser,
-  deleteUser,
 } from "./user.controller.js";
 import {
   existenteEmail,
@@ -46,6 +45,7 @@ router.post(
 router.put(
   "/:id",
   [
+    validarJWT,
     check("id", "No es un ID válido").isMongoId(),
     check("id").custom(existeUsuarioById),
     validarCampos,
