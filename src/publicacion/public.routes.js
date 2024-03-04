@@ -61,8 +61,7 @@ router.post(
     "/:id",
     [
     validarJWT,
-    check(`id`,`No es un id valido`).isMongoId(),
-    check(`id`).custom(existePublicacionById),
+    check(`titulo`,`titulo no aceptado`).not().isEmpty(),
     validarCampos,
     ], 
     publicacionDelete

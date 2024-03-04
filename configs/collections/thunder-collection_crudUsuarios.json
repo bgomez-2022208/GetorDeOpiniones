@@ -1,0 +1,52 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "crudUsuarios",
+    "dateExported": "2024-03-04T04:51:37.005Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "8c4942bb-9013-41d3-9edc-a396a61ab295",
+            "colId": "c937af9b-0fdb-49a1-93ba-0e6fa1a1ac31",
+            "containerId": "",
+            "name": "createUsuario",
+            "url": "http://localhost:8080/api/users",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-03T09:07:31.586Z",
+            "modified": "2024-03-04T04:47:55.074Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\":\"camisas\",\n  \"password\":\"1234567\",\n  \"correo\":\"brandomgomez11@gmail.com\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "f9c96fe7-dfd9-434f-be7a-5e6d011f3591",
+            "colId": "c937af9b-0fdb-49a1-93ba-0e6fa1a1ac31",
+            "containerId": "",
+            "name": "updateUsuario",
+            "url": "http://localhost:8080/api/users/65e442c30d888db39f20bc11",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2024-03-03T09:24:35.157Z",
+            "modified": "2024-03-03T09:30:45.846Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU0NDJjMzBkODg4ZGIzOWYyMGJjMTEiLCJpYXQiOjE3MDk0NTgyMTUsImV4cCI6MTcwOTQ2MTgxNX0.Gy2IEBWwXIYbuIMnYZ7HWUUwe373vwQwnQIaW7Y1DIk"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\":\"mangelito\",\n  \"password\":\"123456789\",\n  \"correo\":\"brandomgomez59776@gmail.com\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

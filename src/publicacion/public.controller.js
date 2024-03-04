@@ -40,17 +40,7 @@ export const getPublicacionById = async (req, res) => {
     });
 }
 
-export const publicacionDelete = async (req, res) => {
-    const {id} = req.params;
-    const publi = await Curso.findByIdAndUpdate(id, {status: false});
-    const publiAutenticado = req.comentarios;
 
-    res.status(200).json({
-        msg: 'Publicacion eliminada',
-        publi,
-        publiAutenticado
-    });
-}
 
 export const updatePublic = async (req, res = response) =>{
     const { qualification, category, text} = req.body;
@@ -76,3 +66,27 @@ export const updatePublic = async (req, res = response) =>{
     });
 }
 
+
+export const publicacionDelete = async (req, res) =>{
+    const { titulo } = req.body;
+
+    const p = await Public.findOne({titulo});
+    console.log(p);
+
+    if (!p) {
+        return res.status(400).json({
+            msg: "El Titulo no existe en la base de datos, porfavor, verifique qeu el Titulo sea el correcto"
+        });
+    }
+
+    p.state=false;
+
+    const pub = await Public.findByIdAndUpdate(p.id, p);
+    const publicacionAutenticado = req.usuario;
+
+    res.status(200).json({
+        msg: "Publicacion elimado",
+        pub,
+        publicacionAutenticado
+    })
+}

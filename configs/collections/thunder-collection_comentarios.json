@@ -1,0 +1,33 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "comentarios",
+    "dateExported": "2024-03-04T04:52:13.734Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "9845e249-e52d-46d0-bebe-37a1a5ca50c5",
+            "colId": "0b592960-1001-4d7b-89c5-34454de4fc29",
+            "containerId": "",
+            "name": "createComentarios",
+            "url": "http://localhost:8080/api/comentarios",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-04T02:25:05.757Z",
+            "modified": "2024-03-04T02:47:44.477Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU0ZmJiNThmM2FjMzU5ODc3YWMzZjUiLCJpYXQiOjE3MDk1MTk5NDUsImV4cCI6MTcwOTUyMzU0NX0.7gfd_PzGjbe0gXx_LviACwjdsgfLJ4EFpg61-pggJv0"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"titulo\":\"La cartelera\",\n  \"correo\":\"brandomgomez59776@gmail.com\",\n  \"comentarios\":\"dsadlaskwidjiwldjmsaiodj\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

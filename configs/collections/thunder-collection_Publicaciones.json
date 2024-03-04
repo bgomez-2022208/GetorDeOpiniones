@@ -1,0 +1,81 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Publicaciones",
+    "dateExported": "2024-03-04T05:16:30.860Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "668f185b-74e7-4451-b2aa-507b6d1c801b",
+            "colId": "801ff159-7202-4f0e-bcd2-c5de27ba23b8",
+            "containerId": "",
+            "name": "createPublicacion",
+            "url": "http://localhost:8080/api/Publicaciones",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-04T00:34:03.137Z",
+            "modified": "2024-03-04T04:50:22.990Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU0ZmJiNThmM2FjMzU5ODc3YWMzZjUiLCJpYXQiOjE3MDk1Mjc4MTQsImV4cCI6MTcwOTUzMTQxNH0.hDCAK9JfgSvjCGFS1VEn7p1VwmeoWWt-qkghS4hw2SE"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"titulo\":\"La camisa\",\n  \"categoria\":\"kalsaosdasd\",\n  \"textoPrincipal\":\"la cartelera era muy chiquita juasjuasjuas\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2c674291-057b-414d-b041-41f3d6a6257c",
+            "colId": "801ff159-7202-4f0e-bcd2-c5de27ba23b8",
+            "containerId": "",
+            "name": "updatePublicacion",
+            "url": "http://localhost:8080/api/Publicaciones/65e51788654020dd4aaaf9d7",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-03-04T03:24:56.572Z",
+            "modified": "2024-03-04T03:29:01.604Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU0ZmJiNThmM2FjMzU5ODc3YWMzZjUiLCJpYXQiOjE3MDk1MjI4OTgsImV4cCI6MTcwOTUyNjQ5OH0.zmgENGzvmzkOzIkyyG-8tVG64Ujb5iJVPZqPe4GD8NE"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"titulo\":\"La soda de uvas\",\n  \"categoria\":\"kalsaosdasd\",\n  \"textoPrincipal\":\"la cartelera era muy chiquita juasjuasjuas\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "b2143042-a3f7-492b-941a-86385c120781",
+            "colId": "801ff159-7202-4f0e-bcd2-c5de27ba23b8",
+            "containerId": "",
+            "name": "deletePublicacion",
+            "url": "http://localhost:8080/api/Publicaciones/La camisa",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-03-04T04:25:01.644Z",
+            "modified": "2024-03-04T04:50:45.618Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU0ZmJiNThmM2FjMzU5ODc3YWMzZjUiLCJpYXQiOjE3MDk1Mjc2OTAsImV4cCI6MTcwOTUzMTI5MH0.rOFPBKXxINY_TuVYipB7QAhZheaGpUqOGlPc-C6SWzs"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"titulo\":\"La camisa\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
