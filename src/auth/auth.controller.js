@@ -3,10 +3,28 @@ import Usuario from '../user/user.model.js'
 import { generarJWT } from '../helpers/generate-jwt.js'; 
 
 export const login = async (req, res) => {
-    const { correo, password } = req.body;
+    const { correo, password, nombre } = req.body;
 
-  try {
-    const usuario = await Usuario.findOne({ correo });
+    try {
+      let userLogin;
+      if (correo) {
+        userLogin = correo;
+      } else if (nombre) {
+        userLogin = nombre;
+      } else {
+        return res.status(400).json({
+          msg: "Debe proporcionar correo o nombre para iniciar sesión",
+        });
+      }
+  
+      let usuario;
+      if(userLogin.includes("@")) {
+        usuario = await Usuario.findOne({correo});
+  
+      }else{
+        usuario = await Usuario.findOne({nombre});
+      }
+    //const usuario = await Usuario.findOne({ correo });
 
     if (!usuario) {
       return res.status(400).json({
