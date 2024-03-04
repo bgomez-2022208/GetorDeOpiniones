@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "comentarios",
-    "dateExported": "2024-03-04T04:52:13.734Z",
+    "dateExported": "2024-03-04T05:51:38.377Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -25,6 +25,30 @@
             "body": {
                 "type": "json",
                 "raw": "{\n  \"titulo\":\"La cartelera\",\n  \"correo\":\"brandomgomez59776@gmail.com\",\n  \"comentarios\":\"dsadlaskwidjiwldjmsaiodj\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "3f5735ed-5788-4d97-a2b8-4c9c0aaf29b2",
+            "colId": "0b592960-1001-4d7b-89c5-34454de4fc29",
+            "containerId": "",
+            "name": "deleteComentario",
+            "url": "http://localhost:8080/api/comentarios",
+            "method": "DELETE",
+            "sortNum": 20000,
+            "created": "2024-03-04T05:22:30.845Z",
+            "modified": "2024-03-04T05:47:44.529Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU0ZmJiNThmM2FjMzU5ODc3YWMzZjUiLCJpYXQiOjE3MDk1MzAyOTQsImV4cCI6MTcwOTUzMzg5NH0.UuOLFQYqHdMquP_tCxvm8LjTl7Ltf5WdKTRVtXGCpVU"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"correo\": \"brandomgomez59776@gmail.com\",\n  \"titulo\":\"La soda de uvas\",\n  \"comentario\":\"dsadlaskwidjiwldjmsaiodj\"\n  \n}",
                 "form": []
             },
             "tests": []
